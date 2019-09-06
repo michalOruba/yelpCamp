@@ -1,4 +1,4 @@
-# kancelariaPadlo
+# YelpCamp
 Repozytorium przedstawiające kod strony stoworzonej w ramach kursu internetowego.
 Aplikacja dotyczy zestawienie obozowisk, wraz z systemem logowania użytkowników, komentarzy i ocen.
 
