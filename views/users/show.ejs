@@ -1,0 +1,23 @@
+<% include ../partials/header %>
+
+<div class="row">
+    <div class="col-md-4">
+        <h1><%= user.firstName + " " + user.lastName %></h1>
+        <div class="thumbnail">
+            <img src="<%= user.avatar %>" alt="user profile image">
+            <div class="caption"><a href="mailto:<%= user.email %>"><%= user.email %></a></div>
+            <a href="/follow/<%= user.id %>"><button class="btn btn-primary">Follow <%= user.username %></button></a>
+        </div>
+        Lorem ipsum dolor sit amet tempus purus. Proin rhoncus placerat ante. Donec enim consectetuer dolor sit amet dui turpis sed interdum eu, dapibus eget, dui. Nulla mi non arcu. Vestibulum quis massa lacinia ut, eleifend ac, felis. Curabitur non sem. Suspendisse rhoncus nunc, ac turpis id felis. Etiam ut erat. Integer aliquet mi eget sapien sed condimentum auctor non, sollicitudin fringilla. Phasellus vestibulum. Donec facilisis vel, metus. Class aptent taciti sociosqu ad litora torquent per inceptos hymenaeos. Sed eu wisi. Phasellus libero at mauris tincidunt lorem. Nullam in dui. Vivamus fermentum nisl a odio id eleifend quam sed nulla. Nunc mollis. Cras magna nec tellus. Nulla varius, leo. Cras eget orci luctus nec, lacinia ut, urna. Vestibulum ante congue eu, pretium justo. Curabitur ut urna magna purus, dictum id, odio. Suspendisse eu libero. Cras est sem, eleifend lectus ut turpis. Vivamus sem nec augue. Fusce suscipit elementum vel, dignissim sagittis porta, turpis egestas. Aenean lacus nibh, interdum viverra. Pellentesque fringilla ut, nunc. Suspendisse a odio nec magna sit amet erat. Suspendisse porttitor varius risus elit laoreet fermentum. Proin at porttitor.
+    </div>
+    <div class="col-md-8">
+        <h3><%= user.firstName %>'s campgrounds:</h3>
+        <ul>
+            <% campgrounds.forEach(function(campground){ %>
+                <li><a href="/campgrounds/<%= campground.id %>"><%= campground.name %></a></li>
+            <% }); %>
+        </ul>
+    </div>
+</div>
+
+<% include ../partials/footer %>
